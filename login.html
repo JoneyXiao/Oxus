@@ -27,7 +27,11 @@
             <div class="ui center aligned container">
                 <div class="ui horizontal list">
                     <div class="item">
-                        <img class="ui image" src="images/neo_bigger.png" alt="">
+                        <!--<img id='logo' class="ui circular image animating transition jiggle" style="animation-duration: 1200ms;" id='logo' src="images/neo_bigger.png" onclick='Foo();'>
+-->
+                        <img id='logo' class="ui image" src="images/neo_bigger.png">
+                        <input type="button" name="" value="默认" onclick="F1();">
+                        <input type="button" name="" value="动起来" onclick="F2();">
                         <div class="content">
                             <h1 class="ui header">Oxus Platform</h1>
                         </div>
@@ -77,7 +81,7 @@
             <br><br>
         </div>
 
-        <div class="ui vertical footer segment">
+        <div class="ui vertical footer segment" style='border-bottom:0px'>
             <div class="ui center aligned container">
                 <div class="ui inverted grid">
                     <div class="three wide column">
@@ -119,6 +123,7 @@
                 </div>
                 <div class="ui section divider"></div>
             </div>
+            <!--
             <div class="ui center aligned container">
                 <div class="ui horizontal list">
                     <div class="item">
@@ -128,6 +133,32 @@
                     </div>
                 </div>
             </div>
+        -->
         </div>
+        <div class="ui center aligned container">
+            <div class="ui horizontal list">
+                <div class="item">
+                    <div class="content">
+                        © 2017 Oxus
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<script src='css/semantic.js'></script>-->
+        <script src='js/jquery-3.2.0.js'></script>
+        <script type="text/javascript">
+            $(function(){
+                $('#logo').click(function(){
+                    $('#logo').toggleClass('circular animating transition jiggle');
+                })
+            });
+            function F1(){
+                $("img[id='logo']").attr('class', 'ui image');
+            }
+            function F2(){
+                var id1 = document.getElementById('logo');
+                id1.className = 'ui circular image animating transition jiggle';
+            }
+        </script>
     </body>
 </html>
