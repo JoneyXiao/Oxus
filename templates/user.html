@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UserList</title>
+</head>
+<body>
+
+    <table border="1">
+
+        {% for item in userData %}
+            <tr>
+                <td>{{item.id}}</td>
+                <td>{{ item.userName }}</td>
+                <td>{{ item.password }}</td>
+                <td>{{ item.contact }}</td>
+                <td>{{ item.email }}</td>
+                <td>{{ item.role }}</td>
+                <td>{{ item.age }}</td>
+                <td>{{ item.gender }}</td>
+                <td>{{ item.memo }}</td>
+                <td>{{ item.createDate }}</td>
+                <td>{{ item.updateDate }}</td>
+
+            </tr>
+        {% endfor %}
+
+    </table>
+
+</body>
+</html>
